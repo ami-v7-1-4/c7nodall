@@ -13,17 +13,9 @@ runtime:
 build:
   pre_ci_boot:
     image_name: drydock/c7nodall
-    image_tag: master
+    image_tag: v7.1.4
     pull: true
     
   ci:
     - node --version
     - npm --version #6.5.0
-    - docker pull shippabledocker/sample_node_pvt:ecr
-    
-integrations:
-    
-  hub:
- #Docker integration
-    - integrationName: ship-docker
-      type: dockerRegistryLogin
